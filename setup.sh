@@ -66,7 +66,8 @@ fetch_brew_dependency rustup
 
 fetch_brew_dependency coreutils
 ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
+echo "export PATH=\"$(brew --prefix coreutils)/libexec/gnubin:$PATH\"" >> ~/.bash_profile
 
 # Install VScode
 
