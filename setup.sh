@@ -69,6 +69,10 @@ ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
 echo "export PATH=\"$(brew --prefix coreutils)/libexec/gnubin:$PATH\"" >> ~/.bash_profile
 
+# Install rust and useful utilities
+rustup-init -y
+${HOME}/.cargo/bin/cargo install cargo-edit
+
 # Install VScode
 
 # Add VScode to PATH - need to check if already in PATH before adding.
