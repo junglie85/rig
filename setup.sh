@@ -71,6 +71,7 @@ echo "export PATH=\"$(brew --prefix coreutils)/libexec/gnubin:$PATH\"" >> ~/.bas
 
 # Install rust and useful utilities
 rustup-init -y
+${HOME}/.cargo/bin/rustup component add rust-src # Rust standard library.
 ${HOME}/.cargo/bin/cargo install cargo-edit
 
 # Install VScode
